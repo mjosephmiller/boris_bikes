@@ -1,0 +1,13 @@
+nouns:user, person, bike, docking station, customer, surnames
+verbs: find, search, release, check, use
+Table 1
+1. objects: user message:
+2. object: customer, message: find_by_surname
+
+Table 2
+1. object: person
+2. object: docking station, message: release_bike
+3. object: bike, message: working?
+
+Bike ---> working? ----> true ----> docking_station ----> release_bike
+		-----> false ---> check_next_bike

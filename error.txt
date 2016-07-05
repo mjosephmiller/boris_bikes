@@ -1,0 +1,5 @@
+Error type: NameError
+File path: Users/Aga/.rvm/rubies/ruby-2.2.2/bin/irb:11:in '<main>'
+Error line number: 1
+Error meaning: referred to a class that doesn't exist
+Solution: Create the class DockingStation
