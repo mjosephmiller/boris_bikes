@@ -18,9 +18,17 @@ describe DockingStation do
 
   it { is_expected.to respond_to(:bike) }
 
-  it 'docks something' do
-    bike = Bike.new
-    expect(subject.dock(bike)).to eq bike
+  describe '#dock' do
+    it 'docks something' do
+      bike = Bike.new
+      expect(subject.dock(bike)).to eq bike
+    end
+    it 'raises an error when there is a bike already docked' do
+      bike = Bike.new
+      subject.dock(bike)
+      new_bike = Bike.new
+      expect { subject.dock(new_bike) }.to raise_error "There's already a bike here"
+    end
   end
 
   it 'returns docked bikes' do
