@@ -8,4 +8,4 @@ A program that will run all the Docking Stations, simulate all the Bikes, and em
 (_)/ (_)
 ```
 
-Authors: [Terry Tilley](https://github.com/terrytilley/) & [Jack Oddy](https://github.com/JackOddy/)
+Authors: [Terry Tilley](https://github.com/terrytilley/), [Jack Oddy](https://github.com/JackOddy/) & [Michael Miller](https://github.com/mjosephmiller/)
