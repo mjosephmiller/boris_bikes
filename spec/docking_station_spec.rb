@@ -33,11 +33,11 @@ describe DockingStation do
 
   describe '#full?' do
     it 'returns false when not full' do
-    expect(subject.full?).to be false
+      expect(subject.full?).to be false
     end
     it 'returns true when full' do
-    20.times { subject.dock(Bike.new) }
-    expect(subject.full?).to be true
+      20.times { subject.dock(Bike.new) }
+      expect(subject.full?).to be true
     end
   end
 
