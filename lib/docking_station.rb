@@ -5,6 +5,10 @@ class DockingStation
     @bikes = []
   end
 
+  def full?
+    @bikes.length >= 20
+  end
+
   def release_bike
     fail 'No bikes available' if @bikes.empty?
     @bikes.pop
