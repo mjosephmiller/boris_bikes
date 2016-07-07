@@ -13,31 +13,21 @@ class DockingStation
     @bikes.each do |bike|
       if bike.check_working?
         return true
-      else
-        return false
       end
     end
+    return false
   end
 
   def release_bike
-
     raise "Error, no bikes available." if empty?
-
     raise "Error, no working bikes available." if !working_bikes?
 
     @bikes.reverse.each do |bicycle|
-        p '----'
-        p "bicycle is #{bicycle}. This bicycle is #{bicycle.check_working?}"
-        p '------'
         if bicycle.check_working?
           working_bike = bicycle
-          p '----'
-          p "working bike is #{working_bike}. This bicycle is #{working_bike.check_working?}"
-          p '-----'
           @bikes.delete(bicycle)
           return working_bike
         end
-      #  raise "Error, no working bikes available."
     end
   end
 
