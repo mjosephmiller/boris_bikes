@@ -36,3 +36,23 @@ stn_0.capacity
 puts "Changing the default capacity of a new station"
 stn_1 = DockingStation.new(100)
 stn_1.capacity
+
+puts "Checking that we can call report broken"
+station = DockingStation.new
+bike = Bike.new
+station.dock(bike)
+station.report_broken
+
+puts "Checking if a broken bike is working"
+station = DockingStation.new
+bike = Bike.new
+station.dock(bike)
+station.report_broken
+bike.working?
+
+puts "Checking that station won't release a broken bike"
+station = DockingStation.new
+bike = Bike.new
+station.dock(bike)
+station.report_broken
+station.release_bike
