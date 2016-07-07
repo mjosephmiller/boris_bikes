@@ -9,15 +9,6 @@ class DockingStation
       @capacity = capacity
   end
 
-  def working_bikes?
-    @bikes.each do |bike|
-      if bike.check_working?
-        return true
-      end
-    end
-    return false
-  end
-
   def release_bike
     raise "Error, no bikes available." if empty?
     raise "Error, no working bikes available." if !working_bikes?
@@ -46,6 +37,15 @@ class DockingStation
 
   private
   attr_reader :bikes
+
+  def working_bikes?
+    @bikes.each do |bike|
+      if bike.check_working?
+        return true
+      end
+    end
+    return false
+  end
 
   def full?
     @bikes.count >= capacity
