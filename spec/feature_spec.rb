@@ -28,3 +28,11 @@ puts "Test: dock 20 bikes into station"
 20.times do
   station.dock(Bike.new)
 end
+
+puts "Testing the capacity of a station"
+stn_0 = DockingStation.new
+stn_0.capacity
+
+puts "Changing the default capacity of a new station"
+stn_1 = DockingStation.new(100)
+stn_1.capacity
